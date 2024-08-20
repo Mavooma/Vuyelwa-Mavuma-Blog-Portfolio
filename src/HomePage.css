@@ -5,84 +5,111 @@ body {
     padding: 0; 
 }
 
-/* Navbar Styles */
-.navbar { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px; 
-    background-color: peru; 
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center;            /* Center items vertically */
+    padding: 10px 20px;             /* Adjust padding for spacing */
+    background-color: #174866;      /* Navbar background color */
 }
 
-.navbar .logo { 
-    color: black; 
-    font-size: 24px; 
-    font-weight: bold; 
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #bb8d6c;                  /* Adjust the brand color */
 }
 
-.navbar .nav-links { 
-    list-style: none; 
-    display: flex; 
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 20px;                      /* Space between links */
 }
 
-.navbar .nav-links li a {
-    color: white; 
-    text-decoration: none; 
-    padding: 10px; 
+.navbar-links a {
+    text-decoration: none;
+    color: #bb8d6c;                   /* Link color */
+    font-size: 1.2em;               /* Adjust font size */
+    padding: 8px 15px;              /* Padding for clickable area */
+    border-radius: 5px;
 }
 
-.navbar .sign-up-btn { 
-    padding: 10px 20px; 
+.navbar-links a:hover {
+    background-color: #eaeaea;      /* Hover background color */
 }
 
 /* Hero Section */
-.hero { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 100px 50px; 
-    color: black;
+.hero {
+    display: flex;
+    justify-content: center; /* Center the entire hero section horizontally */
+    align-items: center;     /* Center the text and image vertically */
+    padding: 50px 0;         /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Optional background color */
 }
 
-.hero .hero-content {
-    max-width: 50%;
+.hero-content {
+    display: flex;
+    align-items: center; /* Align text and image vertically */
+    gap: 20px;           /* Space between text and image */
 }
 
-.hero img {
-    max-width: 50%;
+.hero-text {
+    max-width: 600px;    /* Control the width of the text content */
 }
 
-.hero h1 {
+.hero-text h1 {
     margin-bottom: 20px;
+    font-size: 2.5em;    /* Adjust font size */
+    line-height: 1.2;    /* Adjust line height for better readability */
 }
 
-.hero p {
+.hero-text p {
     margin-bottom: 20px;
+    color: #666;
 }
 
-.hero button {
-    padding: 10px 20px; 
-    margin-bottom: 10px; 
+.hero-text button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero-text button:hover {
+    background-color: #eaeaea;
+}
+
+.hero-image img {
+    max-width: 500px;   /* Control the image size */
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Container Section */
 .container { 
     display: flex; 
     align-items: center; 
+    justify-content: center; /* Center content horizontally */
     padding: 50px; 
+    gap: 20px; /* Add space between the image and the content */
 }
 
 .image-placeholder {
-    flex-basis: 50%;
+    flex: 1; /* Ensure the image container grows as needed */
+    text-align: center; /* Center the image within its container */
 }
 
 .image-placeholder img {
-    max-width: 100%;
+    max-width: 65%; /* Ensure the image takes the full width of its container */
     height: auto;
 }
 
 .content {
-    flex-basis: 50%;
+    flex: 1; /* Ensure the content container grows as needed */
+    max-width: 600px; /* Limit the width of the content */
     padding-left: 20px; /* Add some space between the image and the text */
 }
 
@@ -96,13 +123,22 @@ body {
 
 .content button {
     padding: 10px 20px;
+    background-color: #38617a; /* Match the "services" button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 /* Services Section */
 .services {
     text-align: center;
     padding: 50px;
-    background-color: peachpuff;
+    background-color: #174866;
 }
 
 .services h2, .services p {
@@ -119,7 +155,7 @@ body {
 
 .service {
     width: 30%;
-    background-color: white;
+    background-color: #bb8d6c;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -127,7 +163,7 @@ body {
 }
 
 .service img {
-    width: 100%;
+    width: 60%;
     height: auto;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -140,7 +176,7 @@ body {
 
 .service p {
     margin-bottom: 20px;
-    color: #666;
+    color: whitesmoke;
 }
 
 .cta-buttons {
@@ -152,7 +188,7 @@ body {
     padding: 10px 20px;
     margin-right: 10px;
     border: none;
-    background-color: #007bff;
+    background-color: #38617a;
     color: white;
     cursor: pointer;
     border-radius: 5px;
@@ -162,33 +198,30 @@ body {
     background-color: #0056b3;
 }
 
-
 /* Web Section */
 .web-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
     padding: 20px;
 }
 
-.web-section-image {
-    flex-basis: 50%;
-    max-width: 50%;
+.web-section-image,
+.web-section-content,
+.web-section-button {
+    width: 100%; /* Ensure each section takes full width within the container */
+    max-width: 800px; /* Limit maximum width for better readability */
     box-sizing: border-box;
     padding: 10px;
 }
 
 .web-section-image img {
-    width: 100%;
+    width: 100%; /* Ensure image scales properly */
     height: auto;
 }
 
 .web-section-content {
-    flex-basis: 50%;
-    max-width: 50%;
-    box-sizing: border-box;
-    padding: 10px;
+    margin: 20px 0; /* Space between content and image/button */
 }
 
 .web-section-content h2 {
@@ -200,37 +233,24 @@ body {
     color: #666;
 }
 
-.web-section-details {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
+.web-section-button {
+    display: flex; /* Use flex to center the button */
+    justify-content: center; /* Center button horizontally */
+    width: 100%; /* Make sure button container takes full width */
+    padding: 10px; /* Optional padding around button container */
 }
 
-.web-section-details div {
-    flex-basis: calc(50% - 20px);
-    box-sizing: border-box;
-}
-
-.web-section-buttons {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 20px;
-}
-
-.web-section-buttons button {
+.web-section-button button {
     padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #007bff;
+    background-color: #38617a; /* Match the "services" button color */
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.web-section-buttons button:hover {
-    background-color: #0056b3;
+.web-section-button button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 /* Portfolio Section */
@@ -258,7 +278,7 @@ body {
 }
 
 .portfolio-section button {
-    background-color: #007bff; /* Blue background color */
+    background-color: #38617a; /* Match the "services" button color */
     color: white; /* White text color */
     border: none; /* No border */
     padding: 10px 20px; /* Padding inside the button */
@@ -274,93 +294,107 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: peru; /* Dark background for the footer */
-    color: white; /* White text color */
-    padding: 40px 20px; /* Padding around the footer */
-    text-align: center; /* Center the text and content */
+    background-color: #fff; /* White background for the footer */
+    padding: 20px 0;
+    border-top: 1px solid #ddd; /* Light gray border at the top */
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items */
-    margin-bottom: 20px; /* Space below the footer content */
+    justify-content: space-between; /* Space between logo, nav, and social icons */
+    align-items: center; /* Vertically center the content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding on the sides */
 }
 
-.logo {
-    font-size: 2em; /* Larger font size for the logo */
-    margin-bottom: 20px; /* Space below the logo */
+.footer-content .logo {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.footer-nav {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+.footer-nav, .social-icons, .footer-bottom-nav {
+    display: flex;
+    gap: 20px; /* Space between each list item */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-nav li {
-    display: inline; /* Display list items inline */
-    margin: 0 10px; /* Space between navigation items */
+.footer-nav a, .footer-bottom-nav a {
+    text-decoration: none;
+    color: #333;
 }
 
-.footer-nav a {
-    color: white; /* White text color for links */
-    text-decoration: none; /* Remove underline */
-    font-size: 1em; /* Font size for navigation links */
-}
-
-.footer-nav a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-.social-icons {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 20px 0; /* Space around social icons */
+.footer-nav a:hover, .footer-bottom-nav a:hover {
+    color: #007bff; /* Add hover effect for links */
 }
 
 .social-icons li {
-    display: inline; /* Display list items inline */
-    margin: 0 10px; /* Space between social icons */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center;
+    align-items: center;
 }
 
 .social-icons img {
-    width: 24px; /* Adjust icon size */
-    height: auto; /* Maintain aspect ratio */
+    width: 24px;
+    height: 24px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #444; /* Top border for separation */
-    padding-top: 20px; /* Space above the bottom section */
-}
-
-.footer-bottom p {
-    margin-bottom: 10px; /* Space below the copyright text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0; /* Center align and space above */
+    padding: 0 20px; /* Add padding on the sides */
+    border-top: 1px solid #ddd; /* Light gray border on top */
+    padding-top: 10px; /* Add padding on top after the border */
+    font-size: 0.9em; /* Slightly smaller text for the bottom section */
+    color: #666;
 }
 
 .footer-bottom-nav {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    gap: 15px; /* Smaller gap for the bottom nav links */
 }
 
-.footer-bottom-nav li {
-    display: inline; /* Display list items inline */
-    margin: 0 10px; /* Space between navigation items */
-}
-
-.footer-bottom-nav a {
-    color: white; /* White text color for links */
-    text-decoration: none; /* Remove underline */
-    font-size: 0.9em; /* Font size for bottom navigation links */
-}
-
-.footer-bottom-nav a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Add some responsiveness */
+/* Responsive Styles */
 @media (max-width: 768px) {
+    .footer-content, .footer-bottom {
+        flex-direction: column; /* Stack items vertically on small screens */
+        text-align: center;
+    }
+
+    .footer-nav, .social-icons, .footer-bottom-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-content {
+        padding-bottom: 20px; /* Add some padding at the bottom */
+    }
+    
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
     .service {
         width: 100%;
         margin-bottom: 20px;
