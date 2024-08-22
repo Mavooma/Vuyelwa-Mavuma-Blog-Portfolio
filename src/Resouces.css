@@ -1,0 +1,219 @@
+/* Global Styles */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #174866;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #bb8d6c;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #bb8d6c;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.navbar-links a:hover {
+    background-color: #eaeaea;
+}
+
+.header { 
+    text-align: center; 
+    padding: 50px; 
+}
+.header h1 { 
+    margin: 0; 
+}
+.main { 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 20px; 
+}
+
+.resource-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.column { 
+    text-align: center; 
+}
+.cta { 
+    background-color: lightgrey; 
+    padding: 20px; 
+    text-align: center; 
+}
+.footer { 
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.faq-section h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    border-top: 1px solid #ddd;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-arrow {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 15px 0;
+    color: #666;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100px; /* Adjust according to your content */
+}
+
+.faq-item.active .faq-arrow {
+    transform: rotate(45deg);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #fff; /* White background for the footer */
+    padding: 20px 0;
+    border-top: 1px solid #ddd; /* Light gray border at the top */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between logo, nav, and social icons */
+    align-items: center; /* Vertically center the content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+.footer-content .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-nav, .social-icons, .footer-bottom-nav {
+    display: flex;
+    gap: 20px; /* Space between each list item */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a, .footer-bottom-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-nav a:hover, .footer-bottom-nav a:hover {
+    color: #007bff; /* Add hover effect for links */
+}
+
+.social-icons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0; /* Center align and space above */
+    padding: 0 20px; /* Add padding on the sides */
+    border-top: 1px solid #ddd; /* Light gray border on top */
+    padding-top: 10px; /* Add padding on top after the border */
+    font-size: 0.9em; /* Slightly smaller text for the bottom section */
+    color: #666;
+}
+
+.footer-bottom-nav {
+    gap: 15px; /* Smaller gap for the bottom nav links */
+}
