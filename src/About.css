@@ -5,6 +5,19 @@ body {
     padding: 0; 
 }
 
+/* Style for the section divider */
+.section-divider {
+    border: none; /* Remove the default border */
+    border-top: 2px solid #4f473f; /* Adjust color and thickness */
+    width: 80%; /* Adjust width to fit your design */
+    margin: 40px auto; /* Center the line and adjust spacing */
+    opacity: 0.6; /* Adjust opacity if needed */
+  }
+  
+  .section-divider {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }  
+
 /* Navbar Container */
 .navbar {
     display: flex;
@@ -63,7 +76,7 @@ body {
 
 .buttons button, .hero-text button, .contact-form button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #174866;
     color: white;
     border: none;
     cursor: pointer;
@@ -171,6 +184,21 @@ address a:hover {
 .contact-form textarea {
     resize: vertical; /* Allow vertical resizing only */
 }
+
+/* New rule to align checkbox and label on the same line */
+.contact-form .checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.contact-form .checkbox-container input {
+    margin-right: 5px;
+}
+
+.required {
+    color: red;
+  }
+  
 
 /* Footer Styles */
 .footer {

@@ -5,6 +5,19 @@ body {
     padding: 0; 
 }
 
+/* Style for the section divider */
+.section-divider {
+    border: none; /* Remove the default border */
+    border-top: 2px solid #4f473f; /* Adjust color and thickness */
+    width: 80%; /* Adjust width to fit your design */
+    margin: 40px auto; /* Center the line and adjust spacing */
+    opacity: 0.6; /* Adjust opacity if needed */
+  }
+  
+  .section-divider {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
 /* Navbar Container */
 .navbar {
     display: flex;
@@ -39,17 +52,73 @@ body {
     background-color: #eaeaea;
 }
 
-.header { 
-    text-align: center; 
-    padding: 50px; 
+/* CSS to center the div */
+.centered-div {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 70vh; /* Full height of the viewport */
+    text-align: center; /* Center text */
 }
-.header h1 { 
-    margin: 0; 
+
+.centered-div h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
+
+.centered-div p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.centered-div button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #174866;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.centered-div button:hover {
+    background-color: #bb8d6c;
+    color: #174866;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #174866;
+}
+
+/* Main Section (Cards Layout) */
 .main { 
     display: flex; 
     justify-content: space-around; 
-    padding: 20px; 
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 20px; /* Space between cards */
+    padding: 40px 20px; /* Add padding around the section */
+    background-color: #bb8d6c; /* Light background behind the cards */
+}
+
+/* Card Layout for Resource Columns */
+.column {
+    background-color: #fff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners for a card effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    width: 25%; /* Adjust card width */
+    margin: 10px; /* Space between cards */
+    text-align: center; /* Center content in the card */
+    transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+/* Card Hover Effect */
+.column:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
 }
 
 .resource-image {
@@ -60,21 +129,111 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.column { 
-    text-align: center; 
+.resource-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #174866;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
 }
+
+.resource-button:hover {
+    background-color: #bb8d6c;
+    color: #fff;
+}
+
+/* Call to Action Section */
 .cta { 
     background-color: lightgrey; 
     padding: 20px; 
     text-align: center; 
 }
+
+/* Footer Section */
 .footer { 
-    background-color: #333; 
-    color: white; 
-    text-align: center; 
-    padding: 10px; 
+    background-color: #fff; /* White background for the footer */
+    padding: 20px 0;
+    border-top: 1px solid #ddd; /* Light gray border at the top */
 }
 
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between logo, nav, and social icons */
+    align-items: center; /* Vertically center the content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+.footer-content .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-nav, .social-icons, .footer-bottom-nav {
+    display: flex;
+    gap: 20px; /* Space between each list item */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a, .footer-bottom-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-nav a:hover, .footer-bottom-nav a:hover {
+    color: #007bff; /* Add hover effect for links */
+}
+
+.social-icons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0; /* Center align and space above */
+    padding: 0 20px; /* Add padding on the sides */
+    border-top: 1px solid #ddd; /* Light gray border on top */
+    padding-top: 10px; /* Add padding on top after the border */
+    font-size: 0.9em; /* Slightly smaller text for the bottom section */
+    color: #666;
+}
+
+.footer-bottom-nav {
+    gap: 15px; /* Smaller gap for the bottom nav links */
+}
+
+/* FAQ Section */
 .faq-section {
     max-width: 800px;
     margin: 50px auto;
@@ -138,82 +297,4 @@ body {
 
 .faq-item.active .faq-arrow {
     transform: rotate(45deg);
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #fff; /* White background for the footer */
-    padding: 20px 0;
-    border-top: 1px solid #ddd; /* Light gray border at the top */
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between; /* Space between logo, nav, and social icons */
-    align-items: center; /* Vertically center the content */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; /* Add padding on the sides */
-}
-
-.footer-content .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.footer-nav, .social-icons, .footer-bottom-nav {
-    display: flex;
-    gap: 20px; /* Space between each list item */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav a, .footer-bottom-nav a {
-    text-decoration: none;
-    color: #333;
-}
-
-.footer-nav a:hover, .footer-bottom-nav a:hover {
-    color: #007bff; /* Add hover effect for links */
-}
-
-.social-icons li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px; /* Space between icons */
-    align-items: center;
-}
-
-.social-icons a {
-    display: flex; /* Use flexbox to align items */
-    justify-content: center;
-    align-items: center;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 20px auto 0; /* Center align and space above */
-    padding: 0 20px; /* Add padding on the sides */
-    border-top: 1px solid #ddd; /* Light gray border on top */
-    padding-top: 10px; /* Add padding on top after the border */
-    font-size: 0.9em; /* Slightly smaller text for the bottom section */
-    color: #666;
-}
-
-.footer-bottom-nav {
-    gap: 15px; /* Smaller gap for the bottom nav links */
 }

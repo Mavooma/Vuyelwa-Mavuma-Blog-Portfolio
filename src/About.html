@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Developer Portfolio</title>
     <link rel="stylesheet" href="About.css" />
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("0t2foETsxr_aO40zj"); // Replace with your EmailJS Public Key
+  })();
+</script>
+
   </head>
 
   <body>
     <header>
       <nav class="navbar">
-        <div class="navbar-brand">Vuyelwa Mavuma</div>
+        <a href="HomePage.html" class="navbar-brand">
+          <div>Vuyelwa Mavuma</div>
+        </a> 
         <div class="navbar-links">
           <a href="HomePage.html">Home</a>
           <a href="About.html">About</a>
@@ -24,13 +34,17 @@
         <p class="description">Hi, I'm Vuyelwa Mavuma—a law student turned web developer with a passion for merging creativity and technology. <br>
             From crafting dynamic websites to exploring the legal landscape, my journey is all about innovation and precision.
 
-            This portfolio showcases my work, blending technical skills with a unique perspective shaped by diverse experiences. <br>
+            <br>This portfolio showcases my work, blending technical skills with a unique perspective shaped by diverse experiences. <br>
             Dive in and discover what drives me to create, design, and continuously evolve.</p>
         <div class="buttons">
-          <button>Download CV</button>
-          <button>Contact Info</button>
+          <div class="button-container">
+            <button class="responsive-button">Download CV</button>
+            <button class="responsive-button">Contact Info</button>
+        </div>        
         </div>
       </div>
+
+      <hr class="section-divider">
 
       <section class="hero">
         <div class="hero-content">
@@ -47,10 +61,9 @@
                 
                 I invite you to join me on this adventure as I continue to evolve, learn, and contribute to the ever-changing digital landscape. Let's explore the possibilities together.
             </p>
-            <div class="buttons">
-              <button>Unlock More Content</button>
-              <button>Discover More</button>
-            </div>
+            <a href="Portfolio.html">
+              <button>View Portfolio</button>
+            </a>  
           </div>
           <div class="hero-image">
             <img src="images/Vuv.png" alt="Frontend Developer" />
@@ -58,6 +71,8 @@
         </div>
       </section>
     </header>
+
+    <hr class="section-divider">
 
     <div class="contact-container">
         <div class="overview">
@@ -71,22 +86,26 @@
         </div>
 
         <div class="contact-form">
-            <form action="/submit-form" method="post">
-                <label for="name">Name</label><br>
-                <input type="text" id="name" name="name" required><br>
-
-                <label for="email">Email</label><br>
-                <input type="email" id="email" name="email" required><br>
-
-                <label for="message">Message</label><br>
-                <textarea id="message" name="message" required></textarea><br>
-
-                <input type="checkbox" id="terms" name="terms" required><br>
-                <label for="terms">I agree to the terms</label><br>
-
-                <button type="submit">Send</button>
-            </form>
-        </div>
+          <form id="contact-form">
+            <label for="name">Name <span class="required">*</span></label><br>
+            <input type="text" id="name" name="name" required><br>
+        
+            <label for="email">Email <span class="required">*</span></label><br>
+            <input type="email" id="email" name="email" required><br>
+        
+            <label for="message">Message <span class="required">*</span></label><br>
+            <textarea id="message" name="message" required></textarea><br>
+        
+            <!-- Wrap checkbox and label in a container -->
+            <div class="checkbox-container">
+              <input type="checkbox" id="terms" name="terms" required>
+              <label for="terms">I agree to the terms</label>
+            </div>
+        
+            <button type="submit">Send</button>
+          </form>
+          <div id="status"></div> <!-- For status message -->
+        </div>                     
     </div>
 
     <footer class="footer">
