@@ -44,17 +44,21 @@ body {
     display: flex;
     justify-content: center; /* Center the entire hero section horizontally */
     align-items: center;     /* Center the text and image vertically */
-    padding: 50px 0;         /* Adjust padding as needed */
+    padding: 20px ;         /* Adjust padding as needed */
+    margin: auto;
+    max-width: 1200px;
     background-color: #f9f9f9; /* Optional background color */
 }
 
 .hero-content {
     display: flex;
+    flex-direction: row;
     align-items: center; /* Align text and image vertically */
-    gap: 20px;           /* Space between text and image */
+    gap: 100px;           /* Space between text and image */
 }
 
 .hero-text {
+    flex: 1; /* Allow it to grow and shrink */
     max-width: 600px;    /* Control the width of the text content */
 }
 
@@ -379,74 +383,77 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .footer-content, .footer-bottom {
-        flex-direction: column; /* Stack items vertically on small screens */
-        text-align: center;
-    }
-
-    .footer-nav, .social-icons, .footer-bottom-nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-content {
-        padding-bottom: 20px; /* Add some padding at the bottom */
-    }
-    
     .navbar {
-        flex-direction: column;
+        flex-direction: column; /* Stack the navbar items vertically */
+        padding: 10px; /* Adjusted padding for mobile */
     }
 
     .navbar-links {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Stack links vertically */
+        gap: 8px; /* Slightly reduced space between links */
     }
     
-    .service {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .web-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .web-section-image,
-    .web-section-content {
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-
-    .web-section-details {
-        flex-direction: column;
-    }
-
-    .web-section-details div {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
-    .web-section-buttons {
-        flex-direction: column;
+    .hero {
+        flex-direction: column; /* Stack hero content vertically */
         align-items: center;
     }
 
-    .web-section-buttons button {
-        margin: 10px 0;
+    .hero-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center items */
+    }
+
+    .hero-image img {
+        max-width: 300px; /* Slightly reduced image size for smaller screens */
+    }
+
+    .hero-text {
+        text-align: center; /* Center text on smaller screens */
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+
+    .container {
+        flex-direction: column; /* Stack image and content vertically */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .image-placeholder img {
+        max-width: 100%; /* Ensure the image fits the container */
+    }
+
+    .service {
+        width: 100%; /* Make services full width */
+        margin-bottom: 15px; /* Reduced space between services */
+    }
+
+    .service-container {
+        flex-direction: column; /* Stack services vertically */
+        align-items: center; /* Center the service items */
+    }
+
+    .web-section {
+        flex-direction: column; /* Stack web section items vertically */
+    }
+
+    .portfolio-section h1 {
+        font-size: 1.8em; /* Slightly reduced font size for mobile */
+    }
+
+    .portfolio-section p {
+        font-size: 0.9em; /* Slightly reduced font size for mobile */
     }
 
     .footer-content {
+        flex-direction: column; /* Stack footer items vertically */
+        text-align: center; /* Center text */
+    }
+
+    .footer-nav, .social-icons, .footer-bottom-nav {
         flex-direction: column; /* Stack items vertically */
+        gap: 8px; /* Reduced space between footer items */
     }
 
-    .footer-nav li, .social-icons li {
-        display: block; /* Stack items vertically */
-        margin: 5px 0; /* Space between items */
-    }
-
-    .footer-bottom-nav li {
-        display: block; /* Stack items vertically */
-        margin: 5px 0; /* Space between items */
+    .footer-bottom-nav {
+        margin-top: 15px; /* Add space above bottom navigation */
     }
 }
