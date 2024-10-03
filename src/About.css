@@ -56,6 +56,19 @@ body {
 .main-content {
     text-align: center;
     padding: 50px;
+    background-image: url('images/wow.png'); /* Add the image URL here */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: black; /* Adjust text color to ensure readability */
+}
+
+.main-content h1,
+.main-content p {
+    background-color: white; /* Adds a semi-transparent background for better text visibility */
+    padding: 5px;
+    max-width: 70%; /* Optional: Restrict the max width to fit within the container */
+    margin: 0 auto; /* Centers the content */
 }
 
 .title {
@@ -66,7 +79,8 @@ body {
 
 .description {
     font-size: 1em;
-    color: #666;
+    font-weight: bold;
+    color: black;
     margin-bottom: 30px;
 }
 
