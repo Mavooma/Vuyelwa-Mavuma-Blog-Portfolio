@@ -12,11 +12,8 @@ body {
     width: 80%; /* Adjust width to fit your design */
     margin: 40px auto; /* Center the line and adjust spacing */
     opacity: 0.6; /* Adjust opacity if needed */
-  }
-  
-  .section-divider {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }  
+}
 
 /* Navbar Container */
 .navbar {
@@ -24,7 +21,25 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #174866;
+    background: #174866;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+    border-color: #bb8d6c; /* Match the button with your color scheme */
+}
+
+.navbar-toggler-icon {
+    background-color: #bb8d6c; /* Custom color for the burger icon */
+}
+
+/* Navbar Collapse */
+.navbar-collapse {
+    background-color: #174866; /* Keep the background consistent in mobile view */
+}
+
+.navbar-expand-lg {
+    background-color: #174866; /* Apply the background color for larger screens */
 }
 
 /* Navbar Brand */
@@ -32,6 +47,7 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     color: #bb8d6c;
+    text-decoration: none;
 }
 
 /* Navbar Links */
@@ -50,17 +66,41 @@ body {
 
 .navbar-links a:hover {
     background-color: #eaeaea;
+    color: #174866; /* Ensure hover color contrasts with hover background */
+}
+
+/* Mobile Burger Menu - Ensure the navbar links collapse on smaller screens */
+.navbar-toggler {
+    border: none; /* Ensure no border for the toggler button */
+    background-color: transparent; /* Maintain transparency for consistency */
+}
+
+.navbar-toggler-icon {
+    background-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+
+    /* Change color using CSS filter */
+    filter: invert(100%) !important;
 }
 
 /* Main Content */
 .main-content {
     text-align: center;
     padding: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-image: url('images/wow.png'); /* Add the image URL here */
     background-size: cover; /* Ensures the image covers the entire section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     color: black; /* Adjust text color to ensure readability */
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .main-content h1,
@@ -128,7 +168,7 @@ body {
 
 .hero-text p {
     margin-bottom: 20px;
-    color: #666;
+    color: black;
 }
 
 .hero-image img {
@@ -211,8 +251,7 @@ address a:hover {
 
 .required {
     color: red;
-  }
-  
+}
 
 /* Footer Styles */
 .footer {
@@ -317,7 +356,9 @@ address a:hover {
     }
 
     .main-content {
-        padding: 30px;
+        padding: 30px; /* Reduce padding for medium screens */
+        padding-left: 20px; /* Add some left padding */
+        padding-right: 20px; /* Add some right padding */
     }
 
     .title {
@@ -349,11 +390,8 @@ address a:hover {
     }
 
     .contact-form {
-        padding: 15px;
-    }
-
-    .contact-form input, .contact-form textarea {
-        padding: 8px;
+        width: 90%;
+        margin: auto;
     }
 
     .footer-content {
@@ -363,28 +401,24 @@ address a:hover {
 
     .footer-nav, .social-icons, .footer-bottom-nav {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
-    .social-icons img {
-        width: 20px;
-        height: 20px;
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar-brand {
-        font-size: 1em;
-    }
-
-    .navbar-links a {
-        font-size: 0.9em;
-    }
-
     .main-content {
-        padding: 20px;
+        padding: 20px; 
+        padding-left: 15px; 
+        padding-right: 15px; 
     }
+}
 
+@media (max-width: 480px) {
     .title {
         font-size: 1.5em;
     }
@@ -406,10 +440,6 @@ address a:hover {
     }
 
     .contact-form {
-        padding: 10px;
-    }
-
-    .contact-form input, .contact-form textarea {
-        padding: 6px;
+        padding: 15px;
     }
 }

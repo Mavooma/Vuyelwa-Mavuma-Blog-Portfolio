@@ -51,3 +51,11 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     });
 });
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    let emailField = document.getElementById('email');
+    if (!emailField.value.includes('@')) {
+      event.preventDefault(); 
+      document.getElementById('status').innerHTML = 'Please enter a valid email address.';
+    }
+  });
